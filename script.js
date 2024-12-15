@@ -28,44 +28,26 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-/** Formm Validationn s ***/
-// Handle form submission
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
 
-    // Perform form validation
-    const form = event.target;
-    let isValid = true;
 
-    // Check all inputs for required fields
-    form.querySelectorAll("[required]").forEach(input => {
-        if (!input.value.trim()) {
-            isValid = false;
-            input.style.borderColor = "red"; // Highlight invalid input
-        } else {
-            input.style.borderColor = "#ddd"; // Reset valid input
-        }
+
+
+
+
+
+
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // SweetAlert success message
+        Swal.fire({
+            title: 'Success!',
+            text: 'Your message has been sent successfully.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+
+        // Optionally, you can reset the form after submission
+        this.reset();
     });
 
-    if (isValid) {
-        // Show success message using SweetAlert2
-        Swal.fire({
-            icon: "success",
-            title: "Message Sent!",
-            text: "Thank you for contacting us. We'll get back to you soon.",
-            confirmButtonText: "OK",
-            timer: 3000
-        });
-
-        // Optionally, clear the form after submission
-        form.reset();
-    } else {
-        // Show error message
-        Swal.fire({
-            icon: "error",
-            title: "Validation Error",
-            text: "Please fill out all mandatory fields before submitting.",
-            confirmButtonText: "OK"
-        });
-    }
-});
