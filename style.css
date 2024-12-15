@@ -1,0 +1,1231 @@
+/* Toggle button css*
+/* General Navbar Styling */
+
+.navbar {
+    background-color: #343a40;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: #ffffff;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+    transform: scale(1.1);
+    color: pink;
+}
+
+
+/* Toggle Icon */
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28180, 180, 180, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+
+/* Mobile Menu Items */
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-nav li {
+    margin: 5px 0;
+}
+
+.navbar-nav a {
+    position: relative;
+    /* Necessary for pseudo-element positioning */
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 15px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a:focus {
+    color: orange;
+    /* Hover color */
+}
+
+
+/* Underline effect */
+
+.navbar-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    /* Space between text and underline */
+    height: 1px;
+    /* Thickness of the underline */
+    background-color: transparent;
+    transition: all 0.8s ease;
+}
+
+.navbar-nav a:hover::after,
+.navbar-nav a:focus::after {
+    background-color: orange;
+    /* Underline color matching hover */
+    width: 50%;
+    /* Full width underline on hover */
+    left: 0;
+}
+
+
+/* Initial hidden underline */
+
+.navbar-nav a::after {
+    width: 0%;
+}
+
+
+/* Mobile Menu Dropdown Animation */
+
+.collapse.navbar-collapse {
+    background-color: #c79187;
+    border-radius: 2px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: max-height 0.3s ease-out;
+}
+
+
+/* Add smooth animation */
+
+.collapse.show {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 8px;
+        /* Reduce padding for smaller screens */
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+        /* Smaller text size for mobile */
+    }
+    .navbar-toggler {
+        padding: 0.3rem;
+        /* Reduce padding for toggle button */
+        font-size: 0.9rem;
+        /* Reduce font size for toggle button */
+    }
+    .navbar-toggler-icon {
+        width: 20px;
+        /* Smaller icon size */
+        height: 20px;
+    }
+}
+
+
+/********* Banner section *****************/
+
+.main-section {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.banner-left h1 {
+    margin-top: 30%;
+}
+
+.banner-left h1 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.banner-left h2 {
+    color: #292929;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.banner-left h3 {
+    color: #292929;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.banner-left p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #607d8b;
+}
+
+.head-bottom {
+    height: 3px;
+    width: 140px;
+    margin-bottom: 9px;
+    margin-top: 0px;
+    display: inline-block;
+    background-color: #ea4020;
+}
+
+.banner-btn {
+    margin-top: 40px;
+}
+
+.banner-btn button {
+    padding: 14px 40px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #ea4020;
+    font-size: 16px;
+}
+
+.banner-top {
+    padding: 40px;
+    position: relative;
+    margin-top: 80px;
+}
+
+.banner-img {
+    border-radius: 50% 50% 0% 50%;
+    border: 15px solid #292929 !important;
+    position: relative;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.banner-img img {
+    width: 100%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.banner-top:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 200vw;
+    border: 20px solid #ea4020;
+    border-radius: 310px;
+    background: #fff;
+}
+
+.typing {
+    position: relative;
+    width: fit-content;
+    padding-right: 20px;
+}
+
+.typing::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    color: black;
+    background: #fff;
+    animation: typing 6s steps(22) infinite, caret 1s infinite;
+}
+
+
+/* @-webkit-keyframes typing {
+    to {
+        width: 0;
+    }
+}
+
+@keyframes typing {
+    to {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes caret {
+    50% {
+        color: transparent;
+    }
+}
+
+@keyframes caret {
+    50% {
+        color: transparent;
+    }
+} */
+
+
+/* @media only screen and (max-width:768px) {
+    .banner-left h1 {
+        margin-top: 80px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .banner-left h2 {
+        font-size: 40px;
+        margin: 0px;
+    }
+
+    .banner-left h3 {
+        font-size: 22px;
+    }
+
+    .banner-left .head-bottom {
+        height: 2px;
+        width: 90px;
+    }
+} */
+
+
+/* Styling for the image container */
+
+.banner-img {
+    overflow: hidden;
+    /* Ensure the image doesn't overflow the container */
+    position: relative;
+    width: 90%;
+    /* Make sure it takes full width of the parent container */
+}
+
+
+/* Styling for the image itself */
+
+.banner-img img {
+    width: 100%;
+    /* Make image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Ensures the image covers the area without stretching */
+    transition: transform 0.5s ease-in-out;
+    /* Smooth animation when zooming */
+    border-radius: 10px;
+    /* Optional: Add rounded corners to the image */
+}
+
+
+/* Image hover animation (zoom effect) */
+
+.banner-img img:hover {
+    transform: scale(1.1);
+    /* Zoom in the image */
+}
+
+
+/* Style for the container to arrange buttons in a row */
+
+.banner-btns {
+    display: flex;
+    /* This will arrange the buttons in a row */
+    justify-content: space-between;
+    /* Distributes space between buttons */
+    gap: 20px;
+    /* Adds space between buttons */
+    margin-top: 20px;
+    /* Optional: Adds space above the buttons */
+}
+
+.banner-btn {
+    flex: 1;
+}
+
+.contact-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
+.resume-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/**************** Custom css for Get resume download*************/
+
+.resume-btn:hover {
+    color: white;
+    background-color: #218838;
+    /* Darker green color on hover */
+}
+
+.banner-btn {
+    text-align: center;
+    margin: 20px;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/***************About section*****************/
+
+
+/* Styling for the about-img container */
+
+.about-img {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Styling for the image itself */
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out, opacity 1s ease-out;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+
+/* Hover effect (zoom) */
+
+.about-img img:hover {
+    transform: scale(1.05);
+    /* Zoom effect */
+    opacity: 1;
+}
+
+
+/* Animation on scroll */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-img {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+
+/*****************name css ***********************/
+
+.ckp {
+    color: blueviolet;
+}
+
+.bg-grey {
+    background-color: #f7f6ff;
+}
+
+.heading {
+    text-align: center;
+    width: 100%;
+    float: left;
+    padding-bottom: 20px;
+}
+
+.heading h5 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #292929;
+    font-size: 7vw;
+    color: transparent;
+    font-weight: 600;
+    letter-spacing: 0.8rem;
+    opacity: 0.05;
+    pointer-events: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.heading h2 {
+    font-weight: 600 !important;
+    color: #292929;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    bottom: 70px;
+}
+
+.heading-border {
+    margin-bottom: 10px;
+    margin-top: 0px;
+    display: inline-block;
+    background-color: #cb7c6f;
+}
+
+.about-img img {
+    width: 100%;
+}
+
+.about-info h2 {
+    border-left: 2px solid #ea4020;
+    padding-left: 10px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.about-info h3 {
+    font-weight: 500;
+    color: #292929;
+    font-size: 18px;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.about-info p {
+    padding-left: 10px;
+    color: #555a64;
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 15px;
+}
+
+.about-info .about-tool {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    margin-bottom: 32px;
+}
+
+.about-info .about-tool span {
+    font-size: 13px;
+    border: 1px solid rgba(41, 41, 41, 0.1);
+    padding: 6px 16px;
+    border-radius: 40px;
+    margin: 0 5px 5px 0;
+    background: #fff;
+}
+
+.about-info .about-work span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #ea4020;
+    color: #fff;
+    vertical-align: top;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 12px;
+    float: left;
+}
+
+.about-info .about-work h4 {
+    margin-left: 5px;
+    float: left;
+    margin-top: 8px;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+
+/******************Services Secion************/
+
+.main-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+
+/* Heading Style */
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sectiocolor {
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.heading h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+}
+
+
+/* Service Card Style */
+
+.service {
+    background: #e0f7fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    /* Lift the card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Add a stronger shadow */
+    background-color: lightpink;
+    /* Change background color on hover */
+}
+
+.service-hex {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.service-inner h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-inner p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.5;
+}
+
+
+/***************Expeinced Section*************************/
+
+.experience {
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 0 0.375rem 1.5rem 0 rgba(140, 152, 164, 0.125);
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* Card Styles */
+
+.experience-card {
+    background: #2c3137;
+    /* Initial background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    transition: background-color 0.5s ease;
+    /* Smooth background color transition */
+}
+
+.experience-card:hover {
+    background-color: rgb(169, 123, 39);
+    /* Background color on hover */
+    color: #fff;
+    /* Change text color for contrast */
+}
+
+.experience-card h5,
+.experience-card h4,
+.experience-card p,
+.experience-card span {
+    transition: color 0.5s ease;
+    /* Smooth text color transition */
+}
+
+.experience-card:hover h5,
+.experience-card:hover h4,
+.experience-card:hover p,
+.experience-card:hover span {
+    color: #fff;
+    /* Text color on hover */
+}
+
+.experience h5 {
+    background: #ea4020;
+    display: inline-block;
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+
+/*****************Skills Section css *********************/
+
+
+/* Skills Section */
+
+.skills-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    /* Ensures smooth marquee scrolling */
+}
+
+.skills-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* Marquee Wrapper */
+
+.skills-marquee {
+    width: 100%;
+    overflow: hidden;
+    /* Hides scrolling overflow */
+    position: relative;
+}
+
+.skills-wrapper {
+    display: flex;
+    gap: 15px;
+    animation: marquee 30s linear infinite;
+    /* Slower speed for readability */
+}
+
+.skill-box {
+    background-color: rgb(60, 57, 57);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-box i {
+    font-size: 70px;
+}
+
+
+/* Hover Effect */
+
+.skill-box:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect on hover */
+    background-color: #a56f6f;
+    /* Darker blue on hover */
+}
+
+
+/* Marquee Animation */
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+        /* Start from the right */
+    }
+    to {
+        transform: translateX(-100%);
+        /* Move to the left */
+    }
+}
+
+
+/****************PROJECT  SECTION**************************/
+
+
+/* General Styles */
+
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.projects-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+
+/* Grid/Flex for Responsiveness */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+/* Project Card Styles */
+
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Image Section */
+
+.project-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Text Section */
+
+.project-title {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 15px 15px;
+}
+
+
+/* Keyframe Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/**************Eduction section***********************/
+
+
+/* General Section Styling */
+
+.education-section {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+
+/* Heading Animation */
+
+.heading h5 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+    animation: fadeInOut 3s infinite alternate;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.heading h5:hover {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+/* Heading Title */
+
+.heading h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+
+/* Border Styling */
+
+.heading-border {
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #007bff;
+    margin: 0 10px;
+}
+
+
+/* Timeline Styling */
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    animation: slideUp 0.8s ease-in-out;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 6px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.timeline-content {
+    background-color: aquamarine;
+    padding: 20px 30px;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 100px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-10px);
+    background-color: pink;
+}
+
+
+/* Text Styling */
+
+.timeline-content h3 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.timeline-content .institution {
+    font-size: 1rem;
+    color: #777;
+}
+
+.timeline-content .date {
+    font-size: 0.9rem;
+    color: #999;
+    margin: 10px 0;
+}
+
+.timeline-content .description {
+    color: #555;
+}
+
+
+/* Animations */
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/***************Contact US*****************************/
+
+
+/* General Styling */
+
+.education-section {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+
+/* Sidebar Styling */
+
+.sidebar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.contact-details h3,
+.social-media h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.contact-details a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+
+/* Social Media Icons */
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.social-media ul li a {
+    font-size: 1.5rem;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.social-media ul li a:hover {
+    color: #007bff;
+}
+
+.contact-form-section {
+    background-color: grey;
+}
+
+
+/* Contact Form Styling */
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+/******************Footer Section************************/
+
+
+/* Footer Styling */
+
+.footer-section {
+    background-color: #111;
+    color: #ddd;
+    padding: 40px 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ddd;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #007bff;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer-links ul li a:hover {
+    color: #007bff;
+}
+
+
+/* Social Icons */
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #ddd;
+    margin-right: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+
+/* Footer Bottom */
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    color: #666;
+}
+
+
+/* Animations */
+
+.footer-section h3 {
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.footer-contact p,
+.footer-about p,
+.footer-links ul li {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/************** for whatsapp****************/
+
+.social-icons a i.fab.fa-whatsapp {
+    color: #25d366;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a i.fab.fa-whatsapp:hover {
+    color: #128c7e;
+    transform: scale(1.1);
+}
